@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ganesh Srikar Bulusu</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+  color: #0f172a;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #1e293b, #0f172a);
+  color: white;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  box-shadow: 5px 0 20px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+  margin-bottom: 1rem;
+}
+
+.lang {
+  margin: 10px 0;
+  color: #cbd5f5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lang:hover {
+  color: #38bdf8;
+  transform: translateX(8px);
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #38bdf8, #bae6fd); /* sky blue */
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.profile-img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 3px solid #3b82f6;
+  transition: 0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #3b82f6;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+nav button {
+  background: rgba(255,255,255,0.6);
+  border: none;
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background: #dbeafe;
+}
+
+nav button.active {
+  background: #3b82f6;
+  color: white;
+  box-shadow: 0 0 10px rgba(59,130,246,0.4);
+}
+
+/* SECTIONS */
+.section {
+  display: none;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  animation: fade 0.4s ease;
+}
+
+.section.active {
+  display: block;
+}
+
+@keyframes fade {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1;}
+}
+
+/* CARDS (GLASS EFFECT) */
+.card {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 1.2rem;
+  margin: 1rem 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* ACCORDION */
+.accordion {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s ease;
+  color: #334155;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.7);
+  padding: 10px 14px;
+  border-radius: 999px;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.08);
+  background: #3b82f6;
+  color: white;
+}
+
+.skill img {
+  width: 22px;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+body.dark {
+  background: linear-gradient(135deg, #020617, #0a192f, #0f172a);
+  color: #e2e8f0;
+}
+
+body.dark .card {
+  background: rgba(15, 23, 42, 0.8); /* deep blue glass */
+  color: #e2e8f0;
+}
+
+body.dark nav button {
+  background: #334155;
+  color: white;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background: #1e293b;
+  color: white;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+.sidebar h2 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+.lang {
+  margin: 8px 0;
+  color: #cbd5f5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lang:hover {
+  color: #38bdf8;
+  transform: translateX(5px);
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #fef9c3, #fde68a, #fcd34d); /* sunny yellow */
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.profile-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3b82f6;
+  transition: 0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+nav button {
+  background: #e2e8f0;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+nav button.active {
+  background: #3b82f6;
+  color: white;
+}
+
+/* SECTIONS */
+.section {
+  display: none;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section.active {
+  display: block;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* ACCORDION */
+.accordion {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s ease;
+  color: #334155;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.skill img {
+  width: 25px;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+.hero {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.3rem;
+  height: 35px;
+}
+.theme-btn {
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+}
+/* GENERAL TEXT */
+body.dark {
+  color: #e2e8f0;
+}
+
+/* HEADINGS */
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+  color: #f8fafc;
+}
+
+/* PARAGRAPHS */
+body.dark p {
+  color: #cbd5f5;
+}
+
+/* CARDS */
+body.dark .card {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+/* ACCORDION TEXT */
+body.dark .accordion {
+  color: #f1f5f9;
+}
+
+/* PANEL CONTENT */
+body.dark .panel {
+  color: #cbd5f5;
+}
+
+/* SKILLS */
+body.dark .skill {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+/* NAV BUTTONS */
+body.dark nav button {
+  background: rgba(30, 41, 59, 0.8);
+  color: #e2e8f0;
+}
+
+body.dark nav button.active {
+  background: #2563eb;
+  color: white;
+}
+
+/* SIDEBAR */
+body.dark .sidebar {
+  background: linear-gradient(180deg, #020617, #0a192f);
+}
+
+body.dark .lang {
+  color: #94a3b8;
+}
+
+body.dark .lang:hover {
+  color: #38bdf8;
+}
+.header h1 {
+  color: black !important;
+}
+
+body.dark .header h1 {
+  color: black !important;
+}
+body.dark .header {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff9966);
+}
+.header p {
+  color: black !important;
+}
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+  color: #f8fafc;
+}
+
+body.dark p {
+  color: #cbd5f5;
+}
+body.dark .card {
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.15);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h2>Languages</h2>
+  <p class="lang">English</p>
+  <p class="lang">Telugu - తెలుగు</p>
+  <p class="lang">Hindi - हिन्दी</p>
+  <p class="lang">French -Français</p>
+</div>
+
+<div class="main">
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-content">
+    <img src="IMG_7990.jpg" class="profile-img" alt="Profile">
+    <div>
+      <h1>Ganesh Srikar Bulusu</h1>
+      <button onclick="toggleTheme()" class="theme-btn">🌙</button>
+      <p>.NET & Full-Stack Engineer | AI/ML Specialist</p>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <h2 id="typing"></h2>
+</section>
+
+<!-- NAV -->
+<nav>
+  <button class="tab active" onclick="showTab('about')">About</button>
+  <button class="tab" onclick="showTab('skills')">Skills</button>
+  <button class="tab" onclick="showTab('experience')">Experience</button>
+  <button class="tab" onclick="showTab('projects')">Projects</button>
+</nav>
+
+<!-- ABOUT -->
+<section id="about" class="section active">
+  <h2>About</h2>
+  <div class="card">
+    <p>
+<h3>Building scalable systems at the intersection of backend engineering and AI.</h3>
+<p>I’m a Computer Science postgraduate and Software Developer specializing in building scalable web applications and AI-driven solutions.
+<p>Currently working as a .NET Developer at BTIS, I design and enhance backend systems with a strong focus on clean architecture, performance optimization, and reliable data handling using SQL and MongoDB.</p>
+
+<p>At Tata Consultancy Services (TCS), I supported backend development using Python and MySQL, resolving client issues at scale and collaborating within agile teams to deliver stable, production-ready solutions.</p>
+
+<p>I also worked as an AI Prompt Specialist at Outlier AI, contributing to the training and optimization of large language models through prompt engineering, structured evaluation, and iterative feedback.</p>
+
+<p>I’m passionate about writing clean, efficient code and building systems that are scalable, reliable, and impactful.</p>
+</p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2>Skills</h2>
+  <div class="skills">
+
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg">C#</div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg">.NET</div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">Python</div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">React</div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">Node.js</div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">MongoDB</div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">SQL</div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg">Jenkins</div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg">TensorFlow</div>
+    <div class="skill">🤖 AI / ML</div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <h2>Experience</h2>
+
+  <!-- BTIS -->
+  <div class="card">
+    <div class="accordion">.NET Developer – BTIS</div>
+    <div class="panel">
+      <p>• Developed and maintained .NET web applications with a focus on performance, scalability, and clean architecture.</p>
+      <p>• Designed and implemented data models and queries using MongoDB and SQL, optimizing data access and system reliability.</p>
+      <p>• Collaborated with cross-functional teams to deliver new features, troubleshoot issues, and enhance overall website functionality.</p>
+    </div>
+  </div>
+
+  <!-- TCS -->
+  <div class="card">
+    <div class="accordion">Assistant Systems Engineer – TCS</div>
+    <div class="panel">
+      <p>• Trained in Python and MySQL, supporting backend development.</p>
+      <p>• Resolved 25–35 client queries daily using SQL and backend tools.</p>
+      <p>• Collaborated with agile teams to develop and test software components within tight deadlines.</p>
+    </div>
+  </div>
+
+  <!-- OUTLIER -->
+  <div class="card">
+    <div class="accordion">AI Prompt Specialist (Freelance) – Outlier AI</div>
+    <div class="panel">
+      <p>• Applied prompt engineering and AI/ML techniques to train and optimize large language models.</p>
+      <p>• Provided detailed feedback for AI model fine-tuning and accuracy improvement.</p>
+      <p>• Enhanced AI performance through iterative testing, evaluation, and structured dataset feedback.</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
+
+  <div class="card">
+  <div class="accordion">Insurance Provider Integration – Backend System</div>
+  <div class="panel">
+
+    <p><strong>Tech Stack:</strong> C#, .NET, MongoDB, REST APIs, Jenkins, Azure DevOps, Vault, Consul</p>
+
+    <p>• Developed backend services to onboard a new external insurance provider into an insurance aggregation platform.</p>
+    <p>• Designed and updated MongoDB collections and schemas to support new policy data structures and provider-specific attributes.</p>
+    <p>• Implemented data validation and mapping logic to reconcile incoming provider datasets with existing system records.</p>
+    <p>• Built and tested REST APIs for provider integration, validating request flows and troubleshooting issues using Postman and browser developer tools.</p>
+    <p>• Managed secure configuration and service discovery using HashiCorp Vault and Consul.</p>
+
+  </div>
+</div>
+
+  <div class="card">
+  <div class="accordion">Machine Learning Rock–Paper–Scissors Prediction Bot</div>
+  <div class="panel">
+
+    <p><strong>Tech Stack:</strong> Python, TensorFlow/Keras, NumPy, Matplotlib</p>
+
+    <p>• Developed a machine learning bot that predicts opponent moves using sequence-based pattern recognition.</p>
+    <p>• Designed and trained an LSTM neural network using TensorFlow/Keras on encoded gameplay sequences.</p>
+    <p>• Implemented data preprocessing pipelines to convert gameplay history into model-ready numerical sequences.</p>
+    <p>• Built an inference engine that analyses recent opponent moves and selects the optimal counter strategy.</p>
+    <p>• Evaluated model performance using training and validation metrics with visualization of loss and accuracy trends.</p>
+
+  </div>
+</div>
+
+  <div class="card">
+  <div class="accordion">GPS Tracking Device with GSM Technology</div>
+  <div class="panel">
+
+    <p><strong>Tech Stack:</strong> Arduino, GPS, GSM</p>
+
+    <p>• Built a GPS-based tracking prototype capable of transmitting real-time location data over GSM networks.</p>
+    <p>• Integrated GPS and GSM modules (SIM800L) to send location coordinates via mobile networks.</p>
+    <p>• Applied embedded systems and telecommunications concepts to design and test the tracking solution.</p>
+
+  </div>
+</div>
+
+</section>
+
+</div>
+
+<script>
+function showTab(tabId) {
+  document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(btn => btn.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+  event.target.classList.add('active');
+}
+
+document.querySelectorAll(".accordion").forEach(acc => {
+  acc.addEventListener("click", function () {
+    let panel = this.nextElementSibling;
+    panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + "px";
+  });
+});
+
+let text="Hi, I'm Ganesh Srikar — I build scalable apps & AI systems.";
+let i=0;
+function typeEffect(){
+  if(i<text.length){
+    document.getElementById("typing").innerHTML+=text.charAt(i);
+    i++;
+    setTimeout(typeEffect,40);
+  }
+}
+typeEffect();
+
+function toggleTheme(){
+  document.body.classList.toggle('dark');
+}
+</script>
+
+</body>
+</html>
